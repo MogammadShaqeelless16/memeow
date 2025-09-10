@@ -32,7 +32,7 @@ jobs:
         run: flutter pub get # Get all the required Dart packages
 
       - name: Build Web app
-        run: flutter build web --base-href /${{ github.event.repository.name }}/ # Build for web, setting the correct base href
+        run: flutter build web --base-href /memeow/ # Build for web, setting the correct base href
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
