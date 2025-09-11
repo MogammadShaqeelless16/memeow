@@ -8,6 +8,7 @@ import 'package:memeow/screens/how_to_play_screen.dart';
 import 'package:memeow/screens/settings_screen.dart';
 import 'package:memeow/screens/about_screen.dart';
 import 'package:memeow/screens/game_screen.dart';
+import 'package:memeow/screens/meme_collection_screen.dart';
 
 // Router configuration
 final _router = GoRouter(
@@ -19,6 +20,10 @@ final _router = GoRouter(
     GoRoute(
       path: '/game',
       builder: (context, state) => const GameScreen(),
+    ),
+    GoRoute(
+      path: '/collection',
+      builder: (context, state) => const MemeCollectionScreen(),
     ),
     GoRoute(
       path: '/how-to-play',

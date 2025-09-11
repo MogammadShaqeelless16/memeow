@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class HowToPlayScreen extends StatelessWidget {
@@ -10,57 +11,56 @@ class HowToPlayScreen extends StatelessWidget {
         title: const Text('How to Play'),
       ),
       body: const Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _Step(number: 1, text: 'Read the hilarious scenario presented at the top of the screen.'),
-            _Step(number: 2, text: 'Identify the different roles in the scene (e.g., "Your Mom," "Your Grandma," "You").'),
-            _Step(number: 3, text: 'Browse the library of kitty memes available to you.'),
-            _Step(number: 4, text: 'Drag and drop the purr-fect kitty meme onto each role to complete the scene.'),
-            _Step(number: 5, text: 'Confirm your choices to see your score and move to the next level!'),
+            Text(
+              'Welcome to Memeow!',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
             SizedBox(height: 20),
             Text(
-              'Pro Tip: The funnier and more accurate the meme for the role, the higher your score!',
-              style: TextStyle(fontStyle: FontStyle.italic),
+              'The goal of the game is to match the purr-fect cat meme to the given real-life scenario.',
+              style: TextStyle(fontSize: 16),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Here\'s how it works:',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            Text(
+              '1. Read the scenario at the top of the screen.',
+              style: TextStyle(fontSize: 16),
+            ),
+            SizedBox(height: 10),
+            Text(
+              '2. Choose the cat meme that you think best fits the situation from the four options provided.',
+              style: TextStyle(fontSize: 16),
+            ),
+            SizedBox(height: 10),
+            Text(
+              '3. If you choose the correct meme, you\'ll hear a happy meow and your score will increase.',
+              style: TextStyle(fontSize: 16),
+            ),
+            SizedBox(height: 10),
+            Text(
+              '4. If you choose the wrong meme, you\'ll hear a sad meow.',
+              style: TextStyle(fontSize: 16),
+            ),
+             SizedBox(height: 10),
+            Text(
+              '5. The game ends when you have completed all the scenarios. Can you get a perfect score?',
+              style: TextStyle(fontSize: 16),
+            ),
+            SizedBox(height: 30),
+            Text(
+              'Good luck, and may the funniest cat win!',
+              style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic),
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-// A helper widget for each step
-class _Step extends StatelessWidget {
-  final int number;
-  final String text;
-
-  const _Step({required this.number, required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CircleAvatar(
-            radius: 12,
-            backgroundColor: Theme.of(context).colorScheme.primary,
-            child: Text(
-              number.toString(),
-              style: const TextStyle(fontSize: 12, color: Colors.white, fontWeight: FontWeight.bold),
-            ),
-          ),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Text(
-              text,
-              style: const TextStyle(fontSize: 16),
-            ),
-          ),
-        ],
       ),
     );
   }

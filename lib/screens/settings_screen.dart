@@ -1,4 +1,7 @@
+
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:memeow/main.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -10,30 +13,19 @@ class SettingsScreen extends StatelessWidget {
         title: const Text('Settings'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            // Sound Toggle
-            SwitchListTile(
-              title: const Text('Sound Effects'),
-              value: true, // This would come from a state manager later
-              onChanged: (bool value) {
-                // TODO: Save setting
+            Consumer<ThemeProvider>(
+              builder: (context, themeProvider, child) {
+                return SwitchListTile(
+                  title: const Text('Dark Mode'),
+                  value: themeProvider.themeMode == ThemeMode.dark,
+                  onChanged: (value) {
+                    themeProvider.toggleTheme();
+                  },
+                );
               },
-            ),
-            // Notifications Toggle
-            SwitchListTile(
-              title: const Text('Notifications'),
-              value: false,
-              onChanged: (bool value) {
-                // TODO: Save setting
-              },
-            ),
-            const Spacer(),
-            // App Version
-            Text(
-              'App Version: 1.0.0',
-              style: TextStyle(color: Theme.of(context).hintColor),
             ),
           ],
         ),
