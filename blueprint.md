@@ -1,8 +1,8 @@
-# Memeow - The Cat Meme Reaction Game
+# Memeow - The Kitty Meme Scenario Game
 
 ## Overview
 
-A fun and interactive mobile game where players react to cat memes.
+A fun and interactive mobile game where players drag and drop cat memes to match them with humorous scenarios.
 
 ## Project Blueprint
 
@@ -17,22 +17,22 @@ A fun and interactive mobile game where players react to cat memes.
 *   **UI/UX:**
     *   Basic animations on the main menu using `flutter_animate`.
     *   Custom `MenuButton` widget for consistent styling.
-*   **Game Engine:**
-    *   `flame` integrated for the game screen.
-    *   Basic `FlameGame` instance (`MemeowGame`) created.
 *   **Core Features:**
     *   Main menu with navigation to different screens.
     *   Placeholder screens for Game, How to Play, Settings, and About.
-    *   Basic game screen structure implemented in `game_screen.dart`.
 
 ### Current Plan
 
-1.  **Enhance the Game Screen:**
-    *   Add a background image to the game world.
-    *   Create a `MemeCard` component to display cat memes.
-    *   Add placeholder UI for score and timer.
-    *   Add animated characters or effects using `flame`.
+1.  **Refactor Game to Drag-and-Drop:**
+    *   Update the "How to Play" screen to explain the new game mechanics.
+    *   Create a `Scenario` widget to display the situation (e.g., "POV: You told your grandma you're sick...").
+    *   Implement drag-and-drop functionality for cat memes.
+    *   Create "role" drop zones within the scenario (e.g., "Grandma," "Mom," "You").
+    *   Create a scrollable list/palette of available cat memes.
 2.  **Develop Game Logic:**
-    *   Implement a system for loading and displaying a sequence of memes.
-    *   Add reaction buttons (e.g., "Funny," "Cute," "Grumpy") as Flame components.
-    *   Implement scoring and timer logic within the `FlameGame`.
+    *   Create data models for Scenarios and Memes.
+    *   Implement logic to check if the dropped meme is the correct one for the role in the scenario.
+    *   Add scoring and a system for progressing through different scenarios.
+3.  **Add Art Assets:**
+    *   Find and add a variety of cat meme images to the assets.
+    *   Create or find humorous scenarios.

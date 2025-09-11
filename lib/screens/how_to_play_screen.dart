@@ -14,14 +14,14 @@ class HowToPlayScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _Step(number: 1, text: 'Read the situation presented at the top of the screen.'),
-            _Step(number: 2, text: 'Swipe through the deck of cat meme cards.'),
-            _Step(number: 3, text: 'Swipe RIGHT if the meme is a purr-fect reaction!'),
-            _Step(number: 4, text: 'Swipe LEFT to see the next meme in your deck.'),
-            _Step(number: 5, text: 'Share your hilarious creation with friends!'),
+            _Step(number: 1, text: 'Read the hilarious scenario presented at the top of the screen.'),
+            _Step(number: 2, text: 'Identify the different roles in the scene (e.g., "Your Mom," "Your Grandma," "You").'),
+            _Step(number: 3, text: 'Browse the library of kitty memes available to you.'),
+            _Step(number: 4, text: 'Drag and drop the purr-fect kitty meme onto each role to complete the scene.'),
+            _Step(number: 5, text: 'Confirm your choices to see your score and move to the next level!'),
             SizedBox(height: 20),
             Text(
-              'Pro Tip: The goal is to find the funniest match, not necessarily the "correct" one!',
+              'Pro Tip: The funnier and more accurate the meme for the role, the higher your score!',
               style: TextStyle(fontStyle: FontStyle.italic),
             ),
           ],

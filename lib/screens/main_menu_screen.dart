@@ -36,7 +36,7 @@ class MainMenuScreen extends StatelessWidget {
                     .then(delay: 5000.ms), // Wait 5s before repeating
                 const SizedBox(height: 10),
                 Text(
-                  'The Cat Meme Reaction Game',
+                  'The Kitty Meme Scenario Game',
                   style: Theme.of(context).textTheme.titleMedium,
                   textAlign: TextAlign.center,
                 ).animate().fade(delay: 300.ms, duration: 500.ms).slideY(begin: 1, end: 0),
@@ -44,8 +44,8 @@ class MainMenuScreen extends StatelessWidget {
                 // Menu Buttons
                 ...[
                   MenuButton(
-                    text: 'Paws & Play',
-                    icon: Icons.pets,
+                    text: 'Match the Meme',
+                    icon: Icons.style, // Changed icon for relevance
                     onPressed: () => context.go('/game'),
                   ),
                   const SizedBox(height: 20),
@@ -70,7 +70,7 @@ class MainMenuScreen extends StatelessWidget {
                 const Spacer(),
                 // Footer Text
                 Text(
-                  'React with the purr-fect meme!',
+                  'Create the purr-fect scene!',
                   style: Theme.of(context).textTheme.bodySmall,
                 ).animate().fade(delay: 800.ms, duration: 500.ms),
               ],
